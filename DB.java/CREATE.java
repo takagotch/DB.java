@@ -1,0 +1,23 @@
+CREATE DATABASE taka_db;
+GRANT ALL PRIVILEGES ON taka_db.* TO takashi@localhost IDENTIFIED BY 'password' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+USE taka_db;
+CREATE TABLE picture_list (
+	ID INT(11) NOT NULL,
+	NAME VARCHAR(20) NULL DEFAULT NULL,
+	CONTENTS MEDIUMBLOB NULL,
+	PRIMARY KEY (ID)
+);
+
+CREATE TABLE user_list(
+	ID INT NOT NULL,
+	NAME VARCHAR(20),
+	GDATE,
+	PRIMARY KEY(ID)
+);
+
+INSERT INTO user_list (ID, NAME) VALUES
+	(1, 'Takashi Yoshioka'),
+	(2, 'Takako Tanaka'),
+	(3, 'Taka Yamada');
