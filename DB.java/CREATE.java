@@ -13,7 +13,7 @@ CREATE TABLE picture_list (
 CREATE TABLE user_list(
 	ID INT NOT NULL,
 	NAME VARCHAR(20),
-	GDATE,
+	GDATE　DATE,
 	PRIMARY KEY(ID)
 );
 
